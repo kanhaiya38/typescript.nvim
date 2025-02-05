@@ -41,7 +41,7 @@ export const renameFile = (
     ],
   });
   if (!requestOk) {
-    print("failed to rename file: tsserver request failed");
+    print("failed to rename file: ts_ls request failed");
     return false;
   }
 

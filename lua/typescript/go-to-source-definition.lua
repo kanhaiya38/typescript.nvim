@@ -40,7 +40,7 @@ ____exports.goToSourceDefinition = function(winnr, ____bindingPattern0)
         end
     )
     if not requestOk then
-        print("failed to go to source definition: tsserver request failed")
+        print("failed to go to source definition: ts_ls request failed")
     end
     return requestOk
 end

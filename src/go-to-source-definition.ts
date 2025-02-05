@@ -58,7 +58,7 @@ export const goToSourceDefinition = (
   );
 
   if (!requestOk) {
-    print("failed to go to source definition: tsserver request failed");
+    print("failed to go to source definition: ts_ls request failed");
   }
 
   return requestOk;

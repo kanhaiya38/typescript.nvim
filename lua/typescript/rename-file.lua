@@ -170,7 +170,7 @@ ____exports.renameFile = function(source, target, opts)
         }
     )
     if not requestOk then
-        print("failed to rename file: tsserver request failed")
+        print("failed to rename file: ts_ls request failed")
         return false
     end
     if vim.api.nvim_buf_get_option(sourceBufnr, "modified") then

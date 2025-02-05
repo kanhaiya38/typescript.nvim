@@ -2,7 +2,7 @@ local null_ls = require("null-ls")
 
 local name_to_tile = function(name)
     local title = name:gsub(".%f[%l]", " %1"):gsub("%l%f[%u]", "%1 "):lower() -- add spaces
-    title = title:sub(1, 1):upper() .. title:sub(2) -- capitalize first letter, to match tsserver actions
+    title = title:sub(1, 1):upper() .. title:sub(2) -- capitalize first letter, to match ts_ls actions
     return title
 end
 

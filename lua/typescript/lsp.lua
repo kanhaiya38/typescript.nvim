@@ -22,7 +22,7 @@ local renameHandler = ____handlers.renameHandler
 local ____methods = require("typescript.types.methods")
 local TypescriptMethods = ____methods.TypescriptMethods
 local ____lspconfig = require("lspconfig")
-local tsserver = ____lspconfig.tsserver
+local ts_ls = ____lspconfig.ts_ls
 ____exports.setupLsp = function(overrides)
     local resolvedConfig = __TS__ObjectAssign({}, config, overrides or ({}))
     local ____resolvedConfig_server_0 = resolvedConfig.server
@@ -52,6 +52,6 @@ ____exports.setupLsp = function(overrides)
         ____handlers_TypescriptMethods_RENAME_5 = ____handlers_TypescriptMethods_RENAME_5[TypescriptMethods.RENAME]
     end
     ____resolvedConfig_server_9.handlers = __TS__ObjectAssign({}, ____temp_7, {[____TypescriptMethods_RENAME_8] = ____handlers_TypescriptMethods_RENAME_5 or renameHandler})
-    tsserver.setup(resolvedConfig.server)
+    ts_ls.setup(resolvedConfig.server)
 end
 return ____exports
